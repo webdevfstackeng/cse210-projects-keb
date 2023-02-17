@@ -1,47 +1,23 @@
-// using System;
-// using System.Collections.Generic;
-// using System.IO;
+using System;
 
-//class Program
-// {
-//     static void Main(string[] args)
-//     {
-//         Journal journal = new Journal();
-        
-//                 int choice = 0;
+class Program
+{
+    static void Main(string[] args)
+    {   // Super class instantiation and assinments
+        Assignment summary = new Assignment("Samuel James", "Addition");
+        Console.WriteLine(summary.GetSummary());
+        Console.WriteLine();
 
+        // Sub class instantiation and assinments 
+        MathAssignment homeworklist = new MathAssignment("Paul Simon", "Algebra", "8.6", "12-3");
+        Console.WriteLine(homeworklist.GetSummary());
+        Console.WriteLine(homeworklist.GetHomeworkList());
+        Console.WriteLine();
 
-//             while(choice != 5)
-//             {
-//                 Console.WriteLine("Welcome to the journal Program!");
-//                 Console.WriteLine("Please select one of the following choices (1 - 5):");
-
-//                 Console.WriteLine("1. Write");
-//                 Console.WriteLine("2. Display");
-//                 Console.WriteLine("3. Load");
-//                 Console.WriteLine("4. Save");
-//                 Console.WriteLine("5. Quit");
-
-//                 choice = int.Parse(Console.ReadLine());
-
-
-//                 if (choice == 1)   
-//                 {
-                    
-//                 }
-//                 else if (choice == 2)
-//                 {
-
-//                 }
-//                 else if (choice == 3)
-//                 {
-                        
-//                 }
-//                 else if (choice == 4)
-//                 {
-                        
-//                 }
-                 
-//             }
-//     }
-//}
+        // Sub class instantiation and assinments 
+        WritingAssignment writing = new WritingAssignment("Andrew Bowe", "African Philosophy", "The Causes of Natural Disasters");
+        Console.WriteLine(writing.GetSummary());
+        Console.WriteLine(writing.GetWritingInformation());
+        Console.WriteLine();
+    }
+}
